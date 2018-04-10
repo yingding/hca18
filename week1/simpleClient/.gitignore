@@ -50,3 +50,5 @@ public/
 # Bower stuff.
 bower_components/
 
+!package-lock.json
+
