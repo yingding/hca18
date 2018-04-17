@@ -7,6 +7,10 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
     public title: any;
+
+    // Requirements: type the content of the value initial in the text box to change the value.
+    // Unfortunately it doesn't work.
+    // TODO: find the bug here.
     constructor() {
         const initial = { value: 'Angular 2' };
         this.title = { initial }; // Object spread in TypeScript 2.1!
