@@ -52,6 +52,14 @@ df = ah.get_collection_entries_as_dataframe(db, "moods",mapper=mapper)
 pprint.pprint(df)
 
 # get all entries with mapper function and timestamp as index
+print("\n#### get all entries as seleted dataframe with mapper and timezone conversion")
+#format = '%Y-%m-%d %H:%M:%S.%f'
+#format = '%Y-%m-%d %H:%M:%S'
+mapper = lambda x: {'timestamp': tu.utc_timestamp_in_secs_2_current_local_tz_datetime(int(x['_id']['timestamp'])), 'mood': x['mood']}
+df = ah.get_collection_entries_as_dataframe(db, "moods",mapper=mapper)
+pprint.pprint(df)
+
+# get all entries with mapper function and timestamp as index
 print("\n#### get all entries as seleted dataframe with mapper and converted index to timestamp")
 df = ah.get_collection_entries_as_dataframe(db, "moods",mapper=mapper)
 ## set index of a dataframe

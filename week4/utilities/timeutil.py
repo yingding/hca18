@@ -1,4 +1,5 @@
 import datetime
+from dateutil import tz
 
 class TimeUtil:
     # class / static variable epoch, which is associated to class, different from object variable
@@ -32,6 +33,20 @@ class TimeUtil:
         :return: datetime object of the timestamp (long) given
         """
         return cls.epoch + datetime.timedelta(seconds=timestamp)
+
+    @classmethod
+    def utc_timestamp_in_secs_2_current_local_tz_datetime(cls, timestamp):
+        """
+        this method transforms the long representation of a utc timestamp to a datetime object
+        :param timestamp: long
+        :return: datetime object of the timestamp (long) given
+        """
+        from_zone = tz.tzutc() # get the utc timezone
+        to_zone = tz.tzlocal() # get your local timezone
+        my_native_datetime = datetime.datetime.utcfromtimestamp(timestamp)
+        my_utc_datetime = my_native_datetime.replace(tzinfo=from_zone)
+        my_local_tz_datetime = my_utc_datetime.astimezone(to_zone)
+        return my_local_tz_datetime
 
     @classmethod
     def timestamp_in_millisecs_2_datetime(cls, timestamp):

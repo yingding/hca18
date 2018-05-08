@@ -29,3 +29,6 @@ Rerence: <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">PEP
 * Show the variables in the Python Console while press the sixth button from the toolbar positioned on the left side of the Python Console
 Note: debugging will achieve the same effect
 
+# Issues:
+* Timezone Convertion: https://stackoverflow.com/questions/4770297/convert-utc-datetime-string-to-local-datetime-with-python
+
