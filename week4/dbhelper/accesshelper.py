@@ -13,7 +13,7 @@ class AccessHelper:
         mapper = lambda x : x;
         if 'start' in kwargs and 'end' in kwargs and 'col_name' in kwargs:
             start, end, col_name = kwargs['start'], kwargs['end'], kwargs['col_name']
-            condition = {col_name : {'$gte':int(start),'$gte':int(end)}}
+            condition = {col_name : {'$gte':int(start),'$lte':int(end)}}
         if 'mapper' in kwargs:
             mapper = kwargs['mapper']
         cursor = db[''+collection_name].find(condition)
