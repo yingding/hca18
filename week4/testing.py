@@ -29,8 +29,10 @@ df = ah.get_collection_entries_as_dataframe(db, "moods")
 pprint.pprint(df)
 
 # get all entries as seleted dataframe
-print("\n#### get all entries as seleted dataframe")
-df = ah.get_collection_entries_as_dataframe(db, "moods", start='1494406821407', end='1494407125644', col_name='_id.timestamp')
+startTimestamp = '1524599226551'
+endTimestamp = '1524647104795'
+print("\n#### get all entries as seleted dataframe from {} to {}".format(startTimestamp, endTimestamp))
+df = ah.get_collection_entries_as_dataframe(db, "moods", start=startTimestamp, end=endTimestamp, col_name='_id.timestamp')
 pprint.pprint(df)
 
 # get all entries with mapper function
