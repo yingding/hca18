@@ -33,7 +33,7 @@ Y = dataset[:,13]
 def baseline_model():
     # create sequential model
     model = Sequential()
-    # hidden layer
+    # hidden layer with kernel_initializer to init the default neuron weights https://keras.io/initializers/
     model.add(Dense(13, input_dim=13, kernel_initializer='normal', activation='relu'))
     # output layer
     model.add(Dense(1, kernel_initializer='normal'))
