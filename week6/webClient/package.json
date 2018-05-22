@@ -29,8 +29,8 @@
     "angular2-highcharts": "^0.5.5",
     "core-js": "^2.4.1",
     "highcharts": "^6.1.0",
-    "highcharts-3d": "^0.1.2",
-    "highcharts-more": "^0.1.2",
+    "highcharts-3d": "^0.1.7",
+    "highcharts-more": "^0.1.7",
     "moment": "~2.22.1",
     "rxjs": "^5.5.0",
     "zone.js": "^0.8.4"
