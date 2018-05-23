@@ -9,7 +9,7 @@ import {routing} from './app.routes';
 import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
 import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpModule} from '@angular/http';
 import {NavBarComponent} from './navbar.component';
 import {ExampleComponent, BindingChildComponent, BindingParentComponent} from './examples';
 import {AppChartsModule} from './charts';
@@ -26,7 +26,7 @@ import {AppInputsModule} from './inputs';
         BrowserModule,
         FormsModule,
         routing,
-        HttpClientModule,
+        HttpModule,
         //ChartModule.forRoot(require('highcharts')), // get the global highcharts
         AppInputsModule, // app inputs sub modules
         AppChartsModule  // app charts sub modules
